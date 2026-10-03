@@ -205,7 +205,7 @@ textarea.letter-body { min-height: 110px; }
         <div class="eyebrow">Name It</div>
         <h2 class="screen-title">What's Been Living in Your Head?</h2>
         <p class="screen-desc">There's a thought you've been carrying. <em>Tap the one that's been loudest.</em></p>
-        <div class="thought-grid" id="thoughtGrid">
+        <div class="thought-grid" id="thoughtGrid" data-req-group=".selected">
           <button class="thought-card" onclick="selectThought(this,'A')"><span class="thought-emoji">&#127807;</span><span class="thought-text">"Why didn't they fight for me? I gave them everything."</span><span class="thought-check"></span></button>
           <button class="thought-card" onclick="selectThought(this,'B')"><span class="thought-emoji">&#127810;</span><span class="thought-text">"Maybe I wasn't good enough after all. Maybe they were right."</span><span class="thought-check"></span></button>
           <button class="thought-card" onclick="selectThought(this,'C')"><span class="thought-emoji">&#127793;</span><span class="thought-text">"I keep waiting for someone to fix this. No one is coming."</span><span class="thought-check"></span></button>
@@ -214,7 +214,7 @@ textarea.letter-body { min-height: 110px; }
         </div>
         <div class="isha-response" id="ishaMirrorResponse"><div class="isha-response-text" id="ishaMirrorText"><div class="isha-loading"><span></span><span></span><span></span></div></div></div>
       </div>
-      <div class="nav-bar"><button class="btn btn-ghost" onclick="advance(1)">&larr; Back</button><button class="btn btn-primary" id="btn2" onclick="advance(3)" disabled>Continue &rarr;</button></div>
+      <div class="nav-bar"><button class="btn btn-ghost" onclick="advance(1)">&larr; Back</button><button class="btn btn-primary" id="btn2" onclick="advance(3)">Continue &rarr;</button></div>
     </div>
 
     <!-- 3: Victim to visionary -->
@@ -257,7 +257,7 @@ textarea.letter-body { min-height: 110px; }
         <h2 class="screen-title">Regulate. Research. Reclaim. Liberation.</h2>
         <p class="screen-desc">Liberation moves in a cycle. You cannot skip Regulate and land in Liberation.</p>
         <p class="cycle-locate-prompt">Tap each step. Then mark where you are.</p>
-        <div class="cycle-grid">
+        <div class="cycle-grid" data-req-group=".selected">
           <div class="cycle-card regulate" onclick="selectCycle(this,'Regulate')"><div class="cycle-step">Step 01</div><h3>Regulate</h3><p>Your nervous system must feel safe enough to think clearly.</p><div class="cycle-selected-badge">&#10022; I am here</div></div>
           <div class="cycle-card research" onclick="selectCycle(this,'Research')"><div class="cycle-step">Step 02</div><h3>Research</h3><p>From a regulated place, ask real questions.</p><div class="cycle-selected-badge">&#10022; I am here</div></div>
           <div class="cycle-card reclaim" onclick="selectCycle(this,'Reclaim')"><div class="cycle-step">Step 03</div><h3>Reclaim</h3><p>Take back what the system said wasn't valuable.</p><div class="cycle-selected-badge">&#10022; I am here</div></div>
@@ -265,7 +265,7 @@ textarea.letter-body { min-height: 110px; }
         </div>
         <div class="isha-response" id="ishaCycleResponse"><div class="isha-response-text" id="ishaCycleText"><div class="isha-loading"><span></span><span></span><span></span></div></div></div>
       </div>
-      <div class="nav-bar"><button class="btn btn-ghost" onclick="advance(4)">&larr; Back</button><button class="btn btn-primary" id="btn5" onclick="advance(6)" disabled>Continue &rarr;</button></div>
+      <div class="nav-bar"><button class="btn btn-ghost" onclick="advance(4)">&larr; Back</button><button class="btn btn-primary" id="btn5" onclick="advance(6)">Continue &rarr;</button></div>
     </div>
 
     <!-- 6: Cycle body reflection -->
@@ -292,7 +292,7 @@ textarea.letter-body { min-height: 110px; }
           <div class="gap-card-question">
             <div class="gap-source">Skincare &amp; Body Products</div>
             <p>"Mainstream brands use ingredients that aggravate hormones, and Black women's bodies absorb the cost."</p>
-            <div class="gap-response-btns">
+            <div class="gap-response-btns" data-req-group=".selected, .no-selected">
               <button class="gap-btn" onclick="respondToGap('gap1','yes',this)">Yes, I've felt this</button>
               <button class="gap-btn" onclick="respondToGap('gap1','watched',this)">I've watched others</button>
               <button class="gap-btn" onclick="respondToGap('gap1','no',this)">Not my area</button>
@@ -304,7 +304,7 @@ textarea.letter-body { min-height: 110px; }
           <div class="gap-card-question">
             <div class="gap-source">Food &amp; Nutrition</div>
             <p>"Food companies use high-sodium, low-nutrient fillers that hurt heart health, especially for Black women."</p>
-            <div class="gap-response-btns">
+            <div class="gap-response-btns" data-req-group=".selected, .no-selected">
               <button class="gap-btn" onclick="respondToGap('gap2','yes',this)">Yes, I've felt this</button>
               <button class="gap-btn" onclick="respondToGap('gap2','watched',this)">I've watched others</button>
               <button class="gap-btn" onclick="respondToGap('gap2','no',this)">Not my area</button>
@@ -326,7 +326,7 @@ textarea.letter-body { min-height: 110px; }
           <div class="gap-card-question">
             <div class="gap-source">Economic Systems</div>
             <p>"Companies offer no path for financial literacy or wealth-building. Survival mode is treated as permanent."</p>
-            <div class="gap-response-btns">
+            <div class="gap-response-btns" data-req-group=".selected, .no-selected">
               <button class="gap-btn" onclick="respondToGap('gap3','yes',this)">Yes, I've felt this</button>
               <button class="gap-btn" onclick="respondToGap('gap3','watched',this)">I've watched others</button>
               <button class="gap-btn" onclick="respondToGap('gap3','no',this)">Not my area</button>
@@ -338,7 +338,7 @@ textarea.letter-body { min-height: 110px; }
           <div class="gap-card-question">
             <div class="gap-source">Consulting &amp; Wellness</div>
             <p>"Consulting firms treat clients like numbers. The nervous system is considered irrelevant."</p>
-            <div class="gap-response-btns">
+            <div class="gap-response-btns" data-req-group=".selected, .no-selected">
               <button class="gap-btn" onclick="respondToGap('gap4','yes',this)">Yes, I've felt this</button>
               <button class="gap-btn" onclick="respondToGap('gap4','watched',this)">I've watched others</button>
               <button class="gap-btn" onclick="respondToGap('gap4','no',this)">Not my area</button>
@@ -431,7 +431,7 @@ textarea.letter-body { min-height: 110px; }
         <h2 class="screen-title">Choose Your Pillar.</h2>
         <div class="fire-box"><div class="fire-box-label">The Smartest Move in the In-Between</div><p>Build your business around <em>essentials.</em> Your advocacy plan becomes your business pillars.</p></div>
         <p class="screen-desc" style="font-style:italic; color:var(--mid);">Which pillar wants to become your business? <em>Tap to claim it.</em></p>
-        <div class="pillar-select-grid" id="pillarGrid">
+        <div class="pillar-select-grid" id="pillarGrid" data-req-group=".selected">
           <div class="pillar-select-card" onclick="selectPillar(this,'Skincare')"><div class="pillar-select-header"><div class="pillar-select-title">In Skincare</div><div class="pillar-select-check"></div></div><div class="pillar-select-example">If your body felt the toll of products that aggravate hormones.</div></div>
           <div class="pillar-select-card" onclick="selectPillar(this,'Food and Nutrition')"><div class="pillar-select-header"><div class="pillar-select-title">In Food and Nutrition</div><div class="pillar-select-check"></div></div><div class="pillar-select-example">If you felt the sluggishness of a poor food system.</div></div>
           <div class="pillar-select-card" onclick="selectPillar(this,'Service and Consulting')"><div class="pillar-select-header"><div class="pillar-select-title">In Service and Consulting</div><div class="pillar-select-check"></div></div><div class="pillar-select-example">If you felt like a disposable transaction.</div></div>
@@ -439,7 +439,7 @@ textarea.letter-body { min-height: 110px; }
         </div>
         <div class="isha-response" id="ishaPillarResponse"><div class="isha-response-text" id="ishaPillarText"><div class="isha-loading"><span></span><span></span><span></span></div></div></div>
       </div>
-      <div class="nav-bar"><button class="btn btn-ghost" onclick="advance(13)">&larr; Back</button><button class="btn btn-primary" id="btn14" onclick="advance(15)" disabled>Continue &rarr;</button></div>
+      <div class="nav-bar"><button class="btn btn-ghost" onclick="advance(13)">&larr; Back</button><button class="btn btn-primary" id="btn14" onclick="advance(15)">Continue &rarr;</button></div>
     </div>
 
     <!-- 15: Pillar reflection + state check -->
@@ -680,6 +680,197 @@ function downloadPDF() {
 }
 
 updateProgress(1);
+</script>
+<style>
+/* Required-answer guard */
+.req-missing { outline: 2px solid #c0392b !important; outline-offset: 2px; border-radius: 8px; }
+.req-msg { display: none; flex-shrink: 0; margin: 0 1rem 0.45rem; padding: 0.5rem 0.75rem; border-radius: 8px; background: #fdf0ef; border: 1px solid #e8b4b0; color: #a93226; font-family: inherit; font-size: 0.74rem; line-height: 1.35; text-align: left; }
+.req-msg.show { display: block; }
+.req-locked { opacity: 0.55; }
+</style>
+<script>
+/* Required-answer guard: the forward/submit button only works once every
+   visible question in the current screen is answered.
+   - textareas, text/email inputs and selects must be filled
+   - radio groups need a choice; sliders must be moved or tapped
+   - [data-req-group="<selector>"] needs at least one matching child (chips, checkboxes, pips)
+   - [data-req-custom="<name>"] uses window.REQ_CUSTOM[name]()
+   - [data-optional] opts a field out (an optional email must still be valid if filled)
+   - [data-req-always] keeps a field required while hidden (e.g. one-at-a-time questions)
+   - [data-req-scope] limits an inner "Next" button to its own block
+   - [data-req-final] on a submit button re-checks every screen */
+(function () {
+  var CFG = Object.assign({
+    screens: '.screen',
+    active: '.screen.active',
+    forward: '.nav-bar .btn-primary',
+    msg: 'Please answer every question on this screen before continuing.'
+  }, window.REQ_CONFIG || {});
+  var CUSTOM = window.REQ_CUSTOM || {};
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var shown = [];
+
+  function hiddenIn(node, root) {
+    for (var n = node; n && n !== root; n = n.parentElement) {
+      if (getComputedStyle(n).display === 'none') return true;
+    }
+    return false;
+  }
+  function skip(el, root) {
+    if (el.closest('[data-optional]')) return true;
+    if (el.closest('[data-req-always]')) return false;
+    return hiddenIn(el.closest('label') || el, root);
+  }
+  function filled(el) {
+    if (el.tagName === 'SELECT') return !!el.value;
+    var v = el.value.trim();
+    if (!v) return false;
+    return el.type !== 'email' || EMAIL_RE.test(v);
+  }
+
+  function requirements(root) {
+    var items = [];
+    root.querySelectorAll('textarea, input[type="text"], input[type="email"], select').forEach(function (el) {
+      if (el.type === 'email' && el.closest('[data-optional]') && !hiddenIn(el, root)) {
+        items.push({ mark: el, ok: function () { return !el.value.trim() || EMAIL_RE.test(el.value.trim()); } });
+        return;
+      }
+      if (skip(el, root)) return;
+      items.push({ mark: el, ok: function () { return filled(el); } });
+    });
+    var radios = {};
+    root.querySelectorAll('input[type="radio"][name]').forEach(function (el) {
+      if (skip(el, root) || radios[el.name]) return;
+      radios[el.name] = true;
+      var name = el.name;
+      var label = el.closest('label') || el;
+      items.push({
+        mark: label.parentElement || label,
+        ok: function () { return !!root.querySelector('input[type="radio"][name="' + CSS.escape(name) + '"]:checked'); }
+      });
+    });
+    root.querySelectorAll('input[type="range"]').forEach(function (el) {
+      if (skip(el, root)) return;
+      items.push({ mark: el.parentElement, ok: function () { return el.dataset.touched === '1'; } });
+    });
+    root.querySelectorAll('[data-req-group]').forEach(function (el) {
+      if (el.closest('[data-optional]') || (!el.closest('[data-req-always]') && hiddenIn(el, root))) return;
+      var sel = el.getAttribute('data-req-group');
+      items.push({ mark: el, ok: function () { return !!el.querySelector(sel); } });
+    });
+    root.querySelectorAll('[data-req-custom]').forEach(function (el) {
+      if (hiddenIn(el, root)) return;
+      var fn = CUSTOM[el.getAttribute('data-req-custom')];
+      if (fn) items.push({ mark: el, ok: function () { return !!fn(el); } });
+    });
+    return items;
+  }
+  function missing(root) {
+    return requirements(root).filter(function (r) { return !r.ok(); });
+  }
+
+  function activeScreen() { return document.querySelector(CFG.active); }
+  function scopeFor(btn) {
+    return btn.closest('[data-req-scope]') || btn.closest(CFG.screens) || activeScreen();
+  }
+  function msgBox(btn) {
+    var host = btn.closest('[data-req-scope]') ? btn : (btn.closest('.nav-bar, .nav') || btn);
+    var prev = host.previousElementSibling;
+    if (prev && prev.classList.contains('req-msg')) return prev;
+    var box = document.createElement('div');
+    box.className = 'req-msg';
+    box.setAttribute('role', 'alert');
+    host.parentNode.insertBefore(box, host);
+    return box;
+  }
+  function clearShown() {
+    shown.forEach(function (r) { r.mark.classList.remove('req-missing'); });
+    shown = [];
+  }
+
+  function block(btn, list, text) {
+    if (list.every(function (r) { return r.mark.matches('input[type="email"]'); })) {
+      text = 'Please enter a valid email address' + (list[0].mark.closest('[data-optional]') ? ', or leave it blank.' : '.');
+    }
+    clearShown();
+    list.forEach(function (r) { r.mark.classList.add('req-missing'); });
+    shown = list;
+    var box = msgBox(btn);
+    box.textContent = text;
+    box.classList.add('show');
+    var first = list[0].mark;
+    if (first.getClientRects().length) {
+      first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (first.matches('textarea, input, select')) first.focus({ preventScroll: true });
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest(CFG.forward + ', .question-next, [data-req-final]');
+    if (!btn || btn.disabled) return;
+    var screen = activeScreen();
+    if (!screen) return;
+    var inScreen = screen.contains(btn);
+    if (!inScreen && !btn.matches(CFG.forward)) return;
+
+    if (btn.hasAttribute('data-req-final')) {
+      var all = document.querySelectorAll(CFG.screens);
+      for (var i = 0; i < all.length; i++) {
+        var gaps = missing(all[i]);
+        if (!gaps.length) continue;
+        e.preventDefault(); e.stopImmediatePropagation();
+        if (all[i] === screen) block(btn, gaps, screen.getAttribute('data-req-msg') || CFG.msg);
+        else block(btn, gaps, 'Step ' + (i + 1) + ' still has unanswered questions. Please go back and complete it before submitting.');
+        return;
+      }
+      return;
+    }
+
+    var scope = inScreen ? scopeFor(btn) : screen;
+    var gaps = missing(scope);
+    if (!gaps.length) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    block(btn, gaps, scope.getAttribute('data-req-msg') || CFG.msg);
+  }, true);
+
+  function refresh() {
+    if (shown.length) {
+      shown = shown.filter(function (r) {
+        if (r.ok()) { r.mark.classList.remove('req-missing'); return false; }
+        return true;
+      });
+      if (!shown.length) document.querySelectorAll('.req-msg.show').forEach(function (b) { b.classList.remove('show'); });
+    }
+    var screen = activeScreen();
+    document.querySelectorAll('.req-locked').forEach(function (b) { b.classList.remove('req-locked'); });
+    if (!screen) return;
+    var btns = Array.prototype.slice.call(screen.querySelectorAll(CFG.forward + ', .question-next'));
+    document.querySelectorAll(CFG.forward).forEach(function (b) { if (!b.closest(CFG.screens) && btns.indexOf(b) < 0) btns.push(b); });
+    btns.forEach(function (b) {
+      var scope = screen.contains(b) ? scopeFor(b) : screen;
+      if (missing(scope).length) b.classList.add('req-locked');
+    });
+  }
+  function later() { setTimeout(refresh, 0); }
+
+  function touch(e) {
+    if (e.target.matches && e.target.matches('input[type="range"]')) e.target.dataset.touched = '1';
+  }
+  document.addEventListener('pointerdown', touch, true);
+  document.addEventListener('keydown', touch, true);
+  document.addEventListener('input', function (e) { touch(e); later(); }, true);
+  document.addEventListener('change', later, true);
+  document.addEventListener('click', function (e) {
+    // a new screen should start without stale warnings
+    if (e.target.closest('.btn-ghost, #btn-back')) {
+      clearShown();
+      document.querySelectorAll('.req-msg.show').forEach(function (b) { b.classList.remove('show'); });
+    }
+    later();
+  });
+  document.addEventListener('keyup', later);
+  refresh();
+})();
 </script>
 </body>
 </html>
